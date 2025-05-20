@@ -132,7 +132,7 @@
             S.Drawing.init('.canvas');
             document.body.classList.add('body--ready');
             //想说的话
-            S.UI.simulate("玲玲同学|こんにちは|emm我来..|抓人啦！|我猜你...|一定想说..|你是不是|有!毛!病!|咳，有点尬|不闹了不闹了|给你看个东西|别眨眼哦～|快来了哦～|#countdown 3|#time");
+            S.UI.simulate("玲玲同学|こんにちは|现在时间是:|#time|emm我来..|抓人啦！|我猜你...|一定想说:|你是不是|有!毛!病!|咳，有点尬|不闹了不闹了|给你看个东西|别眨眼哦～|快来了哦～|#countdown 3");
             S.Drawing.loop(function () {
                 S.Shape.render();
             });
@@ -288,7 +288,7 @@
                                     time = t;
                                     S.Shape.switchShape(S.ShapeBuilder.letter(time));
                                 }
-                            }, 1000);
+                            }, 3500);
                         }
                         break;
 
