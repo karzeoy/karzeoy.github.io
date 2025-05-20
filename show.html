@@ -244,23 +244,31 @@
                 action = getAction(current);
                 value = getValue(current);
 
+                console.log("========action is", action)
+
                 switch (action) {
+                    
                     case 'countdown':
                         value = parseInt(value) || 10;
                         value = value > 0 ? value : 10;
 
                         timedAction(function (index) {
+                            console.log("========index is", index)
                             if (index === 0) {
+                                console.log("========sequence.length is", sequence.length)
                                 if (sequence.length === 0) {
-                                    S.Shape.switchShape(S.ShapeBuilder.letter(''));
-                                } else {
                                     window.open('result.html', '_self');
                                     performAction(sequence);
+                                    // S.Shape.switchShape(S.ShapeBuilder.letter(''));
+                                } else {
+                                    // window.open('result.html', '_self');
+                                    // performAction(sequence);
+                                    S.Shape.switchShape(S.ShapeBuilder.letter(''));
                                 }
                             } else {
                                 S.Shape.switchShape(S.ShapeBuilder.letter(index), true);
                             }
-                        }, 1000, value, true);
+                        }, 1500, value, true);
                         break;
 
                     case 'rectangle':
